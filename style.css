@@ -3,31 +3,42 @@ body {
     background: #ffffff;
     color: #000000;
     margin: 40px;
-    max-width: 700px;
+    max-width: 100%;
     line-height: 1.6;
+    display: flex;
 }
 
-h1 {
-    font-size: 24px;
+/* Wrapper to hold both navigation and content */
+.container {
+    display: flex;
+    width: 100%;
 }
 
-a {
+/* Navigation Links (Left Side) */
+.nav-links {
+    width: 25%;  /* Adjust this as needed */
+    padding-right: 20px;
+}
+
+.nav-links a {
+    display: block;
     color: #0088cc;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
-a:hover {
+.nav-links a:hover {
     text-decoration: underline;
 }
 
-/* Content Box */
+/* Main Content (Right Side) */
 #content {
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
+    flex-grow: 1;  /* Takes remaining space */
+    padding: 20px;
+    border-left: 1px solid #ddd; /* Optional separator */
 }
 
-/* Optional: Faint Background Image */
+/* Optional: Background Image */
 body::after {
     content: "";
     position: fixed;
@@ -39,4 +50,37 @@ body::after {
     background-size: contain;
     opacity: 0.2;
     pointer-events: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;  /* Space between icons */
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 24px; /* Adjust size */
+    height: 24px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Slightly grow on hover */
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #content {
+        border-left: none;
+    }
 }

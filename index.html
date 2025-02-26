@@ -7,21 +7,37 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+<!--
+    <div class="social-icons">
+        <a href="https://instagram.com/yourhandle" target="_blank">
+            <img src="assets/instagramIcon.svg" alt="Instagram">
+        </a>
+        <a href="https://tiktok.com/@yourhandle" target="_blank">
+            <img src="assets/tiktokIcon.svg" alt="TikTok">
+        </a>
+        <a href="https://soundcloud.com/yourhandle" target="_blank">
+            <img src="assets/soundcloudIcon.svg" alt="SoundCloud">
+        </a>
+        <a href="https://spotify.com/yourprofile" target="_blank">
+            <img src="assets/spotifyIcon.svg" alt="Spotify">
+        </a>
+    </div>
+    -->
+    <div class="container">
+        <!-- Left Side: Navigation -->
+        <div class="nav-links">
+            <h1>Welcome</h1>
+            <p>Click a link to load content here.</p>
+            <a href="#" onclick="loadPage('home.html')">Home</a>
+            <a href="#" onclick="loadPage('about.html')">About</a>
+            <a href="#" onclick="loadPage('music.html')">Music</a>
+            <a href="#" onclick="loadPage('contact.html')">Contact</a>
+        </div>
 
-    <h1>Welcome</h1>
-    <p>Click a link to load content here.</p>
-
-    <!-- Navigation Links -->
-    <p>
-        <a href="#" onclick="loadPage('home.html')">Home</a> |
-        <a href="#" onclick="loadPage('about.html')">About</a> |
-        <a href="#" onclick="loadPage('music.html')">Music</a> |
-        <a href="#" onclick="loadPage('contact.html')">Contact</a>
-    </p>
-
-    <!-- Content Section (Loads Pages Here) -->
-    <div id="content">
-        <p>This is where content will appear when you click a link.</p>
+        <!-- Right Side: Main Content -->
+        <div id="content">
+            <p>This is where content will appear when you click a link.</p>
+        </div>
     </div>
 
 </body>
