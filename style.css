@@ -51,7 +51,7 @@ body::after {
     opacity: 0.2;
     pointer-events: none;
 }
-
+/* Optional: Social Icons */
 .social-icons {
     display: flex;
     gap: 10px;  /* Space between icons */

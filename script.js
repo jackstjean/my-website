@@ -11,3 +11,16 @@ function loadPage(page) {
         })
         .catch(error => console.error("Error loading page:", error));
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadPage("home.html");
+});
+
+function askForPassword(page) {
+    let password = prompt("Enter Password");
+    if (password === "admin") {
+        loadPage(page);
+    } else {
+        alert("Incorrect Password");
+    }
+}
